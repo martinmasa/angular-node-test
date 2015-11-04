@@ -1,0 +1,19 @@
+{
+  "name": "angular-node-test",
+  "version": "0.1.0",
+  "description": "Sky Angular Node Test",
+  "author": "Martin Mlingwa",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "gulp serve",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtendotnet/angular-node-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mtendotnet/angular-node-test/issues"
+  },
+  "homepage": "https://github.com/mtendotnet/angular-node-test#readme"
+}
