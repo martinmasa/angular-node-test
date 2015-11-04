@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/mtendotnet/angular-node-test/issues"
   },
-  "homepage": "https://github.com/mtendotnet/angular-node-test#readme"
+  "homepage": "https://github.com/mtendotnet/angular-node-test#readme",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-mocha": "^2.1.3",
+    "mocha": "^2.3.3",
+    "mongoose": "^4.2.4",
+    "supertest": "^1.1.0"
+  }
 }
