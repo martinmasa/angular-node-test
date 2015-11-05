@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html data-ng-app="app" lang="en">
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Sky Angular Node Test</title>
@@ -19,7 +19,17 @@
     <h1>Sky Angular Node Test</h1>
   </header>
 
+  <div id="app-container" class='container' data-ng-view=""></div>
+
+  <script src="angular/angular.js"></script>
+  <script src="angular-route/angular-route.js"></script>
+  <script src="ngstorage/ngStorage.js"></script>
+  <script src="satellizer/satellizer.js"></script>
+
   <script src="app.js"></script>
+  <script src="main/main.controller.js"></script>
+  <script src="auth/login.controller.js"></script>
+  <script src="auth/logout.controller.js"></script>
 
 </body>
 </html>

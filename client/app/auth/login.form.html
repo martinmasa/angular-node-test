@@ -1,0 +1,34 @@
+
+<form id="login-form" data-ng-submit="authvm.login(authvm.user)" name="loginForm" class="form-horizontal well col-md-5" novalidate>
+
+  <p class="alert alert-danger" data-ng-if="authvm.model.error">{{authvm.model.error}}</p>
+  {{currentUser}} {{isAuthenticated}}
+  <div class="form-group">
+    <label for="username" class="col-md-3 control-label">Username *</label>
+    <div class="col-md-6">
+      <input type="text" data-ng-model="authvm.user.username" class="form-control" id="username" name="username" required>
+      <span data-ng-show="loginForm.username.$invalid && !loginForm.username.$pristine" class="error-message">
+        Please enter a username
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password" class="col-md-3 control-label">Password *</label>
+    <div class="col-md-6">
+      <input type="password" data-ng-model="authvm.user.password" class="form-control" id="password" name="password" required>
+      <span data-ng-show="loginForm.password.$invalid && !loginForm.password.$pristine" class="error-message">
+        Please enter a password
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="form-group">
+      <div class="col-sm-offset-7 col-sm-5">
+        <button type="submit" class="btn btn-primary" data-ng-disabled="loginForm.$invalid">Login</button>
+      </div>
+    </div>
+  </div>
+
+</form>
