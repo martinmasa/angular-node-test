@@ -14,6 +14,8 @@ module.exports = {
 
   mongo: {
     uri: 'mongodb://localhost/sky-ng-node'
-  }
+  },
+
+  secret: 'somesupersecretivestring'
 
 };

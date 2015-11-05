@@ -53,6 +53,10 @@ UserSchema
 // METHODS
 UserSchema.methods = {
 
+  authenticate: function (plainText) {
+    return this.hashPassword(plainText) === this.hashedPassword;
+  },
+
   makeSalt: function () {
     return crypto.randomBytes(16).toString('base64');
   },

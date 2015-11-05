@@ -23,4 +23,6 @@ module.exports = function (app) {
       });
     });
 
+  app.use('/api/authenticate', require('./api/auth/auth.routes'));
+
 };
