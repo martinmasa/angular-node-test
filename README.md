@@ -27,3 +27,14 @@ Expose a JSON feed of the authentication data to authenticated admin users only.
 Good luck!
 
 Sky Apps team
+
+---
+
+### Instructions
+
+- run mongo on localhost (or update `mongo.uri` property in `server/config/environment` files)
+- `npm install -g gulp bower` to install gulp and bower globally
+- `npm install && bower install` on project root folder to install packages
+- `npm test` or `gulp test` to run tests
+- `npm start` or `gulp serve` to start server (default port: 8080, can be configured)
+- users created when the app is initialised: 'user', 'manager', 'admin', 'developer', 'tester' with 'password' as password
