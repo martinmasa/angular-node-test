@@ -12,6 +12,11 @@ var config = require('./config/environment');
 // database configuration
 mongoose.connect(config.mongo.uri);
 
+// populate with sample data if configured to do so
+if (config.seedDB) {
+  require('./config/seedDB');
+}
+
 // express app configuration
 var app = express();
 require('./config/express')(app);
