@@ -17,6 +17,14 @@ var gulp = require('gulp'),
     });
  });
 
+gulp.task('serve', function () {
+  $.nodemon({
+    script: './server/app.js',
+    watch: ['./server/'],
+    ignore: ['./server/test/', './node_modules'],
+    env: { 'NODE_ENV': 'development' }
+  });
+});
 
  gulp.task('test', ['test:server']);
- gulp.task('default', ['test']);
+ gulp.task('default', ['serve']);

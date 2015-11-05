@@ -1,3 +1,6 @@
+/*
+ * Test configuration file
+ */
 
 'use strict';
 
