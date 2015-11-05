@@ -5,12 +5,14 @@
 
 'use strict';
 
+var path = require('path');
+
 module.exports = function (app) {
 
   app
     .route('/')
     .get(function (req, res) {
-      res.status(200).send('OK');
+      res.sendFile(path.resolve(app.get('rootPath') + '/client/app/index.html'));
     });
 
   app
