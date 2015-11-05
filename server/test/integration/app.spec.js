@@ -71,24 +71,39 @@ describe('Server routes', function () {
         });
     });
 
-
-    describe('GET /undefined-url', function() {
-      it('should respond with 404 Not Found', function(done) {
-        request(app)
-          .get('/undefined-url')
-          .expect(404)
-          .end(function(err, res){
-            if (err) {
-              return done(err)
-            }
-
-            done();
-          });
-      });
-    });
-
-
   });
+
+   describe('GET /api/admin/authlogs', function() {
+    it('should respond with 401 Unauthorised if not authenticated', function(done) {
+      request(app)
+        .get('/api/admin/authlogs')
+        .expect(401)
+        .end(function(err, res){
+          if (err) {
+            return done(err)
+          }
+
+          done();
+        });
+    });
+  });
+
+
+   describe('GET /undefined-url', function() {
+    it('should respond with 404 Not Found', function(done) {
+      request(app)
+        .get('/undefined-url')
+        .expect(404)
+        .end(function(err, res){
+          if (err) {
+            return done(err)
+          }
+
+          done();
+        });
+    });
+  });
+
 
 
 });

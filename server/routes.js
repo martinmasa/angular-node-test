@@ -26,5 +26,6 @@ module.exports = function (app) {
     });
 
   app.use('/api/authenticate', require('./api/auth/auth.routes'));
+  app.use('/api/admin/authlogs', require('./api/admin/authlog/authlog.routes'));
 
 };
