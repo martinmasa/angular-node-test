@@ -13,4 +13,14 @@ module.exports = function (app) {
       res.status(200).send('OK');
     });
 
+  app
+    .route('/api')
+    .get(function (req, res) {
+      res
+      .status(200)
+      .json({
+        message: 'Login: POST /api/authenticate'
+      });
+    });
+
 };
